@@ -1,0 +1,54 @@
+{
+  "name": "vue-ace",
+  "version": "1.0.0",
+  "description": "vue2 ace editor",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard src/**",
+    "fix": "standard src/** --fix",
+    "dev": "rollup -c ./scripts/rollup.example.js -w",
+    "test": "nyc ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueparty/vue-ace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vueparty/vue-ace/issues"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "html"
+    ],
+    "ignore": [
+      "dist"
+    ]
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "test"
+    ]
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./test/helpers/setup.js"
+    ],
+    "babel": "inherit"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "homepage": "https://github.com/vueparty/vue-ace#readme",
+  "devDependencies": {
+    "brace": "^0.11.1",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
